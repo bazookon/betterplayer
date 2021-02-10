@@ -126,7 +126,7 @@ AVPictureInPictureController *_pipController;
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:item];
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(itemFailedToPlayToEndTime:)
+                                                 selector:@selector(itemDidPlayToEndTime:)
                                                      name:AVPlayerItemFailedToPlayToEndTimeNotification
                                                    object:item];
         self._observersAdded = true;
@@ -198,6 +198,8 @@ AVPictureInPictureController *_pipController;
         }
     }
 }
+
+
 
 
 static inline CGFloat radiansToDegrees(CGFloat radians) {
